@@ -1,7 +1,7 @@
 ---
-- hosts: localhosts
+- hosts: localhost
   remote_user: root
-  task: 
+  tasks: 
    - name: Check the date on the server.
      command: date
    - name: Check the ip on the server.
