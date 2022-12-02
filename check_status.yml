@@ -4,5 +4,3 @@
   tasks: 
    - name: Check the date on the server.
      command: date
-   - name: Check the ip on the server.
-     command: ip add
