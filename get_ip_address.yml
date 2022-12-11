@@ -1,0 +1,8 @@
+---
+- name: Get IP address of the host
+  hosts: all
+
+  tasks:
+  - name: Display IP
+    debug:
+      var: ansible_default_ipv4['address']

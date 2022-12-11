@@ -1,0 +1,8 @@
+- name: Collect IP address and save as /tmp/hosts
+  hosts: all
+
+  tasks:
+  - template:
+      src: hosts.tmpl
+      dest: /tmp/hosts
+    delegate_to: localhost
