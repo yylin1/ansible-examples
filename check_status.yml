@@ -1,5 +1,5 @@
 ---
-- hosts: localhost
+- hosts: rhel
   remote_user: root
   tasks: 
    - name: Check the date on the server.

@@ -1,5 +1,5 @@
 - name: Collect IP address and save as /tmp/hosts
-  hosts: all
+  hosts: rhel
 
   tasks:
   - template:

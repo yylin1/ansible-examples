@@ -1,6 +1,6 @@
 ---
 - name: Get IP address of the host
-  hosts: all
+  hosts: rhel
 
   tasks:
   - name: Display IP
