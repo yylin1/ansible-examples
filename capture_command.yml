@@ -1,0 +1,16 @@
+---
+- name: Capture command output and convert to image
+  hosts: rhel
+
+  tasks:
+  - name: Display content of /etc/redhat-release
+    shell: cat /etc/redhat-release
+    register: redhat_release_result
+
+  - name: hostname
+    shell: hostname
+    register: hostname_result
+
+  - name: Convert command output as image
+    shell: echo -e "{{ hostname_result.stdout }}\n{{ redhat_release_result.stdout }}" | convert label:@- {{ hostname_result.stdout }}.png
+    delegate_to: localhost
